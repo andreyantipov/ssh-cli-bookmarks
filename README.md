@@ -1,10 +1,10 @@
 ## Description:
--
+
 Command line manager of ssh servers from ~/.ssh/config file for ssh
 
 
 ## Installation:
--
+
 
 1. `git clone https://github.com/AndreyAntipov/ssh-bookmarks-shell.git -b master`
 2.  `cd ssh-bookmarks-shell`
@@ -18,13 +18,13 @@ Command line manager of ssh servers from ~/.ssh/config file for ssh
 
 
 ## Requirements:
--
+
 - Ruby
 - Bundler
 
 
 ## Usage:
--
+
 ssh-bookmarks
 
 ---
