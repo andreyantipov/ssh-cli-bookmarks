@@ -1,3 +1,7 @@
+### Description:
+Command line manager of ssh servers from ~/.ssh/config file for ssh
+
+
 ### Installation:
 
 1. `git clone https://github.com/AndreyAntipov/ssh-bookmarks-shell.git -b master`
@@ -18,9 +22,6 @@
 
 ### Usage:
 ssh-bookmars
-
-### Tips:
-binding hotkey may be more usefull
 
 ---
 ![Server selection](https://raw.githubusercontent.com/AndreyAntipov/ssh-bookmarks-shell/media/screenshoot.png "Server selection")
