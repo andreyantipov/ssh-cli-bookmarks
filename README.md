@@ -21,7 +21,7 @@ Command line manager of ssh servers from ~/.ssh/config file for ssh
 
 
 ### Usage:
-ssh-bookmars
+ssh-bookmarks
 
 ---
 ![Server selection](https://raw.githubusercontent.com/AndreyAntipov/ssh-bookmarks-shell/media/screenshoot.png "Server selection")
