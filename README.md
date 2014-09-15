@@ -1,12 +1,18 @@
 [![Code Climate](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli/badges/gpa.svg)](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli)
 
-## Description:
+## SSH-Bookmarks
 
-Command line manager of ssh servers from ~/.ssh/config file for ssh
+A dead simple cli ssh manager. 
+All parameters are stored in ~/.ssh/config file
+
+## Requirements:
+
+- ~/.ssh/config file
+- Ruby
+- Bundler
 
 
 ## Installation:
-
 
 1. `git clone https://github.com/AndreyAntipov/ssh-bookmarks-shell.git -b master`
 2.  `cd ssh-bookmarks-shell`
@@ -18,11 +24,13 @@ Command line manager of ssh servers from ~/.ssh/config file for ssh
 
 `git clone https://github.com/AndreyAntipov/ssh-bookmarks-shell.git -b master && cd ssh-bookmarks-shell && bundle install && cp ssh-bookmarks.rb /usr/local/bin/ssh-bookmarks && sudo chmod +x /usr/local/bin/ssh-bookmarks`
 
+## Configuring SSH config file
 
-## Requirements:
+`http://linux.die.net/man/5/ssh_config`
 
-- Ruby
-- Bundler
+or
+
+`man ssh_config`
 
 
 ## Usage:
