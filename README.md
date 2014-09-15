@@ -24,9 +24,10 @@ All parameters are stored in ~/.ssh/config file
 
 `git clone https://github.com/AndreyAntipov/ssh-bookmarks-shell.git -b master && cd ssh-bookmarks-shell && bundle install && cp ssh-bookmarks.rb /usr/local/bin/ssh-bookmarks && sudo chmod +x /usr/local/bin/ssh-bookmarks`
 
+
 ## Configuring SSH config file
 
-`http://linux.die.net/man/5/ssh_config`
+[http://linux.die.net/man/5/ssh_config](http://linux.die.net/man/5/ssh_config)
 
 or
 
