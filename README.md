@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli/badges/gpa.svg)](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli)
+
 ## Description:
 
 Command line manager of ssh servers from ~/.ssh/config file for ssh
