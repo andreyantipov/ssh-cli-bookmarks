@@ -6,6 +6,7 @@ A dead simple cli ssh manager.
 
 All parameters are stored in ~/.ssh/config file
 
+
 ## Requirements:
 
 - ~/.ssh/config file
