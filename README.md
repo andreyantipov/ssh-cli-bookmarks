@@ -4,8 +4,6 @@
 
 A dead simple cli ssh manager. 
 
-All settings stored in ~/.ssh/config file
-
 
 ## Requirements:
 
