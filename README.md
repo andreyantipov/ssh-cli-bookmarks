@@ -2,7 +2,7 @@
 
 ## SSH-Bookmarks
 
-A dead simple cli ssh manager. 
+A dead simple cli ssh server list.
 
 
 ## Requirements:
