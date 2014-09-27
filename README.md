@@ -25,6 +25,21 @@ A dead simple cli ssh server list.
 `git clone https://github.com/AndreyAntipov/ssh-bookmarks-shell.git -b master && cd ssh-bookmarks-shell && bundle install && cp ssh-bookmarks.rb /usr/local/bin/ssh-bookmarks && sudo chmod +x /usr/local/bin/ssh-bookmarks`
 
 
+##### install with ZSH integration 
+
+`git clone https://github.com/AndreyAntipov/ssh-bookmarks-shell.git -b master && cd ssh-bookmarks-shell && bundle install && cp ssh-bookmarks.rb /usr/local/bin/ssh-bookmarks && sudo chmod +x /usr/local/bin/ssh-bookmarks && echo "# ssh-bookmarks binded to Ctrl+o\n ssh_bookmarks() {\n BUFFER=\"ssh-bookmarks\"\n  zle accept-line\n} zle -N ssh_bookmarks\n bindkey \"\Co\" ssh_bookmarks\n" >> ~/.zshrc`
+
+
+# ssh-bookmarks binded to Ctrl+o
+`echo "# ssh-bookmarks binded to Ctrl+o\n
+ssh_bookmarks() {\n
+BUFFER=\"ssh-bookmarks\"\n 
+zle accept-line\n}
+zle -N ssh_bookmarks\n
+bindkey \"\Co\" ssh_bookmarks\n" >> ~/.zshrc`
+
+
+
 ## Configuring SSH config file
 
 [http://linux.die.net/man/5/ssh_config](http://linux.die.net/man/5/ssh_config)
