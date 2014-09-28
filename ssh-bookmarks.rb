@@ -19,6 +19,8 @@ class Application
           
             def self.skip? block
 
+              # 0 - pass block
+              # 1,2 - ignore block
               @condition = 0 unless defined? @condition 
 
               case block[0]
