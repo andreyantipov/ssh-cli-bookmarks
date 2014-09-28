@@ -5,7 +5,7 @@ class Application
 
     require 'highline/import'
 
-    VERSION = "0.1"
+    VERSION = "0.1.1"
 
     class Foundation
 
@@ -18,9 +18,20 @@ class Application
         module Bookmarks
           
             def self.skip? block
-              # skip comments block and skip full block if comment have an exception
-              block[0] == "#" ? false : true
+
+              @skipped = 0 unless defined? @skipped 
+
+              case block[0]
+                when "#"
+                  # skip every comment block and skip full block if exception is set 
+                  @skipped = 1 if block[1] == "hidden"; true
+                when "Host"
+                  @skipped > 0 && @skipped < 2 ? (@skipped += 1; true) : (@skipped = 0; false) 
+                else
+                  @skipped == 0 ? false : true 
+                end
             end
+
 
             def self.config
             
@@ -36,10 +47,10 @@ class Application
                         
                         # create chunks
                         c.each do |block|
-                            if skip? block
+                           unless skip? block
                               blocks << {} if block[0] == "Host"
                               blocks.last.merge!("#{block[0]}".downcase.to_sym => block[1])
-                            end
+                           end
                         end
 
                         return blocks
