@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/pericles/guard-reek.git
+  revision: 0259d7d3d0eaf69fd7ad888688bdaed8450c4031
+  specs:
+    guard-reek (0.0.1)
+      guard (>= 1.8)
+      reek (~> 1.3.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -15,8 +23,12 @@ GEM
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.1)
     diff-lcs (1.2.5)
+    docile (1.1.5)
     ffi (1.9.3)
     formatador (0.2.5)
+    fuubar (2.0.0)
+      rspec (~> 3.0)
+      ruby-progressbar (~> 1.4)
     gherkin (2.12.2)
       multi_json (~> 1.3)
     guard (2.6.1)
@@ -25,6 +37,9 @@ GEM
       lumberjack (~> 1.0)
       pry (>= 0.9.12)
       thor (>= 0.18.1)
+    guard-bundler (2.0.0)
+      bundler (~> 1.0)
+      guard (~> 2.2)
     guard-cucumber (1.4.1)
       cucumber (>= 1.2.0)
       guard (>= 1.1.0)
@@ -34,7 +49,11 @@ GEM
     guard-rubocop (1.1.0)
       guard (~> 2.0)
       rubocop (~> 0.20)
+    guard-spring (0.0.4)
+      guard
+      spring
     highline (1.6.21)
+    hirb (0.7.2)
     hitimes (1.2.2)
     listen (2.7.9)
       celluloid (>= 0.15.2)
@@ -56,6 +75,11 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    reek (1.3.8)
+      rainbow (>= 1.99, < 3.0)
+      ruby2ruby (>= 2.0.8, < 3.0)
+      ruby_parser (~> 3.3)
+      sexp_processor
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -75,22 +99,43 @@ GEM
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.4)
     ruby-progressbar (1.5.1)
+    ruby2ruby (2.1.3)
+      ruby_parser (~> 3.1)
+      sexp_processor (~> 4.0)
+    ruby_parser (3.6.3)
+      sexp_processor (~> 4.1)
+    sexp_processor (4.4.4)
+    simplecov (0.9.1)
+      docile (~> 1.1.0)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
     slop (3.6.0)
+    spring (1.1.3)
     thor (0.19.1)
     timers (4.0.0)
       hitimes
+    yard (0.8.7.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   cucumber
+  fuubar
   guard
+  guard-bundler
   guard-cucumber
+  guard-reek!
   guard-rspec
   guard-rubocop
+  guard-spring
   highline
+  hirb
   pry
   rspec
   rspec-expectations
   rubocop
+  simplecov
+  spring
+  yard
