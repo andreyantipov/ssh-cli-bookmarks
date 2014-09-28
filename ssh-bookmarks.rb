@@ -16,6 +16,12 @@ class Application
         end
 
         module Bookmarks
+          
+            def self.skip? block
+              # skip comments block and skip full block if comment have an exception
+              block[0] == "#" ? false : true
+            end
+
             def self.config
             
                 path = "#{ENV['HOME']}/.ssh/config"
@@ -23,17 +29,20 @@ class Application
                 if File.exist?(path)
                     begin
                         # read and build config array
-                        config = []
+                        blocks = []
+                        
                         c = File.readlines(path).map &:split
-                        c.reject!(&:empty?)
+                        c.reject! &:empty?
                         
                         # create chunks
-                        c.each do |b|
-                            config << {} if b[0] == "Host"
-                            config.last.merge!("#{b[0]}".downcase.to_sym => b[1])
+                        c.each do |block|
+                            if skip? block
+                              blocks << {} if block[0] == "Host"
+                              blocks.last.merge!("#{block[0]}".downcase.to_sym => block[1])
+                            end
                         end
-                        
-                        return config
+
+                        return blocks
 
                     rescue => err
                         abort "Configuration file read error: #{err}"
@@ -52,7 +61,6 @@ class Application
           begin
               servers = Bookmarks.config
               show_menu servers, "host"
-              trap("INT") { puts "Shutting down."; socket.close; context.terminate; exit}
           rescue SystemExit, Interrupt, EOFError
             puts "\nexiting..."
           end
