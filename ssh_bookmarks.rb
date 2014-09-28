@@ -48,7 +48,7 @@ class Application
         @prev_index = 0 unless defined? @prev_index
         options = {}
 
-        index -=
+        index = index-1
         # catch options between range
         raw[@prev_index..index].each do |opt|
           if comment?(opt) && option?(opt)
