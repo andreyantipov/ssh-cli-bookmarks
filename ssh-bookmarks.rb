@@ -49,8 +49,13 @@ class Application
     class Interface < Foundation
         
         def initialize
-            servers = Bookmarks.config
-            show_menu servers, "host"
+          begin
+              servers = Bookmarks.config
+              show_menu servers, "host"
+              trap("INT") { puts "Shutting down."; socket.close; context.terminate; exit}
+          rescue SystemExit, Interrupt, EOFError
+            puts "\nexiting..."
+          end
         end
         
         def show_menu(list, title)
@@ -62,7 +67,6 @@ class Application
                     menu.choice(item[t]) { SSH.connect item[t] }
                 end
             end
-
         end
     end
 
