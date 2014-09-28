@@ -19,16 +19,16 @@ class Application
           
             def self.skip? block
 
-              @skipped = 0 unless defined? @skipped 
+              @condition = 0 unless defined? @condition 
 
               case block[0]
                 when "#"
                   # skip every comment block and skip full block if exception is set 
-                  @skipped = 1 if block[1] == "hidden"; true
+                  @condition = 1 if block[1] == "hidden"; true
                 when "Host"
-                  @skipped > 0 && @skipped < 2 ? (@skipped += 1; true) : (@skipped = 0; false) 
+                  @condition > 0 && @condition <= 1 ? (@condition += 1; true) : (@condition = 0; false) 
                 else
-                  @skipped == 0 ? false : true 
+                  @condition
                 end
             end
 
