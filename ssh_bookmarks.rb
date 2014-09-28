@@ -38,7 +38,7 @@ class Application
             container << {}
             container.last.merge!(options: options(raw, index))
           end
-          container.last.merge!(block[0].downcase.to_sym => block[1]) if defined? container.last
+          container.last.merge!(block[0].downcase.to_sym => block[1]) if defined? container
         end
         container
       end
