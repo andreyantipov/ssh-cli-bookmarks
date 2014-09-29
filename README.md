@@ -13,12 +13,12 @@ A dead simple cli ssh server list.
     $ ssh-bookmarks
 
 
-## Configure SSH server list
+## Configure
 
     $ man ssh_config
 
 
-## Screenshoots
+--- 
 
 ![Server selection](https://raw.githubusercontent.com/AndreyAntipov/ssh-bookmarks-shell/media/screenshoot.png "Server selection")
 

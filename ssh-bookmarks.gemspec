@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'ssh-bookmarks/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "SSH-Bookmarks"
+  spec.name          = "ssh-bookmarks"
   spec.version       = SshBookmarks::VERSION
   spec.authors       = ["Andrey Antipov"]
   spec.email         = ["andrey@antipov.me"]
   spec.summary       = %q{A dead simple cli ssh server list.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  #spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = "https://github.com/AndreyAntipov/ssh-bookmarks"
   spec.license       = "MIT"
 

@@ -48,8 +48,6 @@ class Application
         index = index-1
         # catch options between range
         raw[@prev_index..index].each do |opt|
-          p opt
-          ask("#{@prev_index}..#{index}")
           if comment?(opt) && option?(opt)
             options.merge!(opt[1].downcase.to_sym => true)
           end
@@ -94,7 +92,6 @@ class Application
     end
 
     def show_menu(list, title)
-      puts list
       t = title.to_sym
       proposal = 'Please choose the server which you would like to connect?'
       choose do |menu|
