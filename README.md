@@ -1,9 +1,4 @@
 
-[![Code Climate](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli/badges/gpa.svg)](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli)
-[![Dependency Status](https://gemnasium.com/AndreyAntipov/ssh-bookmarks-cli.svg)](https://gemnasium.com/AndreyAntipov/ssh-bookmarks-cli)
-[![Build Status](https://travis-ci.org/AndreyAntipov/ssh-bookmarks-cli.svg?branch=master)](https://travis-ci.org/AndreyAntipov/ssh-bookmarks-cli)
-[![Coverage Status](https://img.shields.io/coveralls/AndreyAntipov/ssh-bookmarks-cli.svg)](https://coveralls.io/r/AndreyAntipov/ssh-bookmarks-cli)
-
 A dead simple cli ssh server list.
 
 ## ssh-bookmarks <sub>0.1</sub>
@@ -18,13 +13,10 @@ A dead simple cli ssh server list.
     $ ssh-bookmarks
 
 
-## Configure SSH config file
+## Configure SSH server list
 
-[http://linux.die.net/man/5/ssh_config](http://linux.die.net/man/5/ssh_config)
+    $ man ssh_config
 
-or
-
-$ man ssh_config
 
 ## Screenshoots
 
