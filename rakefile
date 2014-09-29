@@ -1,3 +1,2 @@
-require 'quality/rake/task'
+require "bundler/gem_tasks"
 
-Quality::Rake::Task.new

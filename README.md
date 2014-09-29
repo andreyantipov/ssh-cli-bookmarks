@@ -1,67 +1,47 @@
-[![Code Climate](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli/badges/gpa.svg)](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli)
 
-## SSH-Bookmarks
+[![Code Climate](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli/badges/gpa.svg)](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli)
+[![Dependency Status](https://gemnasium.com/AndreyAntipov/ssh-bookmarks-cli.svg)](https://gemnasium.com/AndreyAntipov/ssh-bookmarks-cli)
+[![Build Status](https://travis-ci.org/AndreyAntipov/ssh-bookmarks-cli.svg?branch=master)](https://travis-ci.org/AndreyAntipov/ssh-bookmarks-cli)
+[![Coverage Status](https://img.shields.io/coveralls/AndreyAntipov/ssh-bookmarks-cli.svg)](https://coveralls.io/r/AndreyAntipov/ssh-bookmarks-cli)
 
 A dead simple cli ssh server list.
 
-
-## Requirements:
-
-- ~/.ssh/config file
-- Ruby
-- Bundler
+## ssh-bookmarks <sub>0.1</sub>
 
 
-## Installation:
+## Installation
 
-1. `git clone https://github.com/AndreyAntipov/ssh-bookmarks-shell.git -b master`
-2. `cd ssh-bookmarks-shell`
-3. `bundle install`
-4. `cp ssh-bookmarks.rb /usr/local/bin/ssh-bookmarks`
-5. `sudo chmod +x /usr/local/bin/ssh-bookmarks`
+    $ gem install ssh-bookmarks
 
-##### Inline
+## Usage
 
-`git clone https://github.com/AndreyAntipov/ssh-bookmarks-shell.git -b master && cd ssh-bookmarks-shell && bundle install && cp ssh-bookmarks.rb /usr/local/bin/ssh-bookmarks && sudo chmod +x /usr/local/bin/ssh-bookmarks`
+    $ ssh-bookmarks
 
 
-##### Install with ZSH integration 
-
-`git clone https://github.com/AndreyAntipov/ssh-bookmarks-shell.git -b master && cd ssh-bookmarks-shell && bundle install && cp ssh-bookmarks.rb /usr/local/bin/ssh-bookmarks && sudo chmod +x /usr/local/bin/ssh-bookmarks && echo "# ssh-bookmarks binded to Ctrl+o\n ssh_bookmarks() {\n BUFFER=\"ssh-bookmarks\"\n  zle accept-line\n} zle -N ssh_bookmarks\n bindkey \"\Co\" ssh_bookmarks\n" >> ~/.zshrc`
-
-
-# ssh-bookmarks binded to ctrl+o
-`echo "# ssh-bookmarks binded to Ctrl+o\n
-ssh_bookmarks() {\n
-BUFFER=\"ssh-bookmarks\"\n 
-zle accept-line\n}
-zle -N ssh_bookmarks\n
-bindkey \"\Co\" ssh_bookmarks\n" >> ~/.zshrc`
-
-
-
-## Configuring SSH config file
+## Configure SSH config file
 
 [http://linux.die.net/man/5/ssh_config](http://linux.die.net/man/5/ssh_config)
 
 or
 
-`man ssh_config`
+$ man ssh_config
 
-
-## Usage:
-
-ssh-bookmarks
-
-
-## Screenshoots:
+## Screenshoots
 
 ![Server selection](https://raw.githubusercontent.com/AndreyAntipov/ssh-bookmarks-shell/media/screenshoot.png "Server selection")
 
 --- 
 
-## License:
+## License
 
 The MIT License (MIT) 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions in [LICENSE.md](https://github.com/AndreyAntipov/ssh-bookmarks-shell/blob/master/LICENSE.md)
+
+## Contributing
+
+1. Fork it ( https://github.com/[my-github-username]/ssh_bookmarks/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am ‘Add some feature’`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
