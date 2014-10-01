@@ -5,7 +5,7 @@
 class Application
   require 'highline/import'
 
-  # Core methods
+  # core methods
   class Foundation
     # SSH methods
     module SSH
@@ -19,7 +19,7 @@ class Application
       PATH = "#{ENV['HOME']}/.ssh/config"
       OPTIONS = %w(hidden)
 
-      # prepare config
+      # parse configuration file
       def initialize
         # load ssh config
         new = File.readlines(PATH).map(&:split)
@@ -45,7 +45,7 @@ class Application
       def options(raw, index)
         @prev_index = 0 unless defined? @prev_index
         options = {}
-        index = index-1
+        index += 1 if index > 0
         # catch options between range
         raw[@prev_index..index].each do |opt|
           if comment?(opt) && option?(opt)
