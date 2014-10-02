@@ -4,8 +4,7 @@
 # dead simple ssh connection manager
 class Application
   require 'highline/import'
-  require 'sshbookmarks'
-
+  require 'ssh-bookmarks'
 
   # CLI interface for SSH manager
   class Interface < Foundation
@@ -18,6 +17,9 @@ class Application
       puts "\nexiting..."
     end
 
+    # Show menu
+    # @param list [Array] list of all parameters of  hosts
+    # @param title [String] which parameter will be a title of item of menu
     def show_menu(list, title)
       t = title.to_sym
       proposal = 'Please choose the server which you would like to connect?'
@@ -31,5 +33,6 @@ class Application
       end
     end
   end
+  # Initialize interface
   Interface.new
 end
