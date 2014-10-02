@@ -1,12 +1,26 @@
+<sup>
+[![Code Climate](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli/badges/gpa.svg)](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli)
+[![Dependency Status](https://gemnasium.com/AndreyAntipov/ssh-bookmarks-cli.svg)](https://gemnasium.com/AndreyAntipov/ssh-bookmarks-cli)
+[![Gem Version](https://badge.fury.io/rb/ssh-bookmarks.svg)](http://badge.fury.io/rb/ssh-bookmarks)
+</sup>
+
+
+## ssh-bookmarks
 
 A dead simple cli ssh server list.
-
-## ssh-bookmarks <sub>0.1</sub>
 
 
 ## Installation
 
     $ gem install ssh-bookmarks
+
+## Updating
+
+    $ gem update ssh-bookmarks
+
+## Uninstalling
+
+    $ gem uninstall ssh-bookmarks
 
 ## Usage
 
@@ -32,7 +46,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/ssh_bookmarks/fork )
+1. Fork it ( https://github.com/AndreyAntipov/ssh-bookmarks/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am ‘Add some feature’`)
 4. Push to the branch (`git push origin my-new-feature`)
