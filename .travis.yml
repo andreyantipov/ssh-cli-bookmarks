@@ -19,4 +19,4 @@ before_install:
 install: "bundle install"
 #script: "bundle exec rake spec:unit spec:acceptance features"
 # exec default rspec task
-script "bundle exec rake"
+script: "bundle exec rake"
