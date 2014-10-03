@@ -1,16 +1,19 @@
 #!/usr/bin/env ruby
 # encoding: UTF-8
 
+# resolve dependencies
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+
 # dead simple ssh connection manager
 class Application
   require 'highline/import'
-  require 'sshbookmarks'
-
+  require 'ssh/bookmarks'
 
   # CLI interface for SSH manager
-  class Interface < Foundation
+  class Interface
     def initialize
-      config = Config.new
+      config = Ssh::Bookmarks::Config.new
       show_menu config.data, 'host'
 
       # ignore errors when use ctrl-c or ctrl-d
@@ -18,6 +21,9 @@ class Application
       puts "\nexiting..."
     end
 
+    # show menu
+    # @param list [Array] all paramerers from config
+    # @param title [String] determine which parameter will be used for title
     def show_menu(list, title)
       t = title.to_sym
       proposal = 'Please choose the server which you would like to connect?'
@@ -25,7 +31,7 @@ class Application
         menu.prompt = proposal
         list.each do |item|
           unless item[:options][:hidden]
-            menu.choice(item[t]) { SSH.connect item[t] }
+            menu.choice(item[t]) { Ssh.connect item[t] }
           end
         end
       end

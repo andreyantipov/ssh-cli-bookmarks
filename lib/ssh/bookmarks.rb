@@ -1,16 +1,13 @@
-# This module include foundation class
-module SshBookmarks
-  # This class include all core methods of application
-  class Foundation
-    # This module have SSH methods
-    module SSH
-      # Initialize ssh connection
-      # @param server [String] name of server
-      def self.connect(server)
-        exec "ssh #{server}"
-      end
-    end
+require 'ssh/bookmarks/version'
 
+module Ssh
+  # Initialize ssh connection
+  # @param server [String] name of server
+  def self.connect(server)
+    exec "ssh #{server}"
+  end
+
+  module Bookmarks
     # This class handle the configuration file
     class Config
       # Constant which stored path of ssh config file

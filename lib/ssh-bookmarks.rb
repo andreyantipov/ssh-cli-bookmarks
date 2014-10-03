@@ -1,1 +1,0 @@
-require 'ssh-bookmarks/config'
