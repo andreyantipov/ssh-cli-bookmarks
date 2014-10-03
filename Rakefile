@@ -1,10 +1,11 @@
-require "bundler/gem_tasks"
+require 'rake'
+require 'rspec/core/rake_task'
 
-require 'rake/testtask'
-
-Rake::TestTask.new do |t|
-    t.libs << 'test'
+RSpec::Core::RakeTask.new do |t|
+  #task.rspec_opts = Dir.glob("[0-9][0-9][0-9]_*").collect { |x| "-I#{x}" }
+  #task.rspec_opts << '-r ./rspec_config --color -f d'
+  t.pattern = '**/*_spec.rb'
+  t.rspec_opts = ['--default-path', 'test/spec']
 end
 
-desc "Run tests"
-task :default => :test
+task test: :spec
