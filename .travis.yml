@@ -17,4 +17,5 @@ branches:
 before_install:
       - gem update --system
 install: "bundle install"
-script: "bundle exec rake spec:unit spec:acceptance features"
+#script: "bundle exec rake spec:unit spec:acceptance features"
+script "bundle exec rake"
