@@ -18,4 +18,5 @@ before_install:
       - gem update --system
 install: "bundle install"
 #script: "bundle exec rake spec:unit spec:acceptance features"
+# exec default rspec task
 script "bundle exec rake"
