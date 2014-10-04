@@ -1,8 +1,11 @@
 [![Code Climate](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli/badges/gpa.svg)](https://codeclimate.com/github/AndreyAntipov/ssh-bookmarks-cli)
-[![Dependency Status](https://gemnasium.com/AndreyAntipov/ssh-bookmarks-cli.svg)](https://gemnasium.com/AndreyAntipov/ssh-bookmarks-cli)
+[![Dependency Status](https://gemnasium.com/AndreyAntipov/ssh-bookmarks.svg)](https://gemnasium.com/AndreyAntipov/ssh-bookmarks)
 [![Gem Version](https://badge.fury.io/rb/ssh-bookmarks.svg)](http://badge.fury.io/rb/ssh-bookmarks)
 [![Coverage Status](https://img.shields.io/coveralls/AndreyAntipov/ssh-bookmarks-cli.svg)](https://coveralls.io/r/AndreyAntipov/ssh-bookmarks-cli)
 [![Build Status](https://travis-ci.org/AndreyAntipov/ssh-bookmarks.svg?branch=master)](https://travis-ci.org/AndreyAntipov/ssh-bookmarks)
+
+
+
 
 ## ssh-bookmarks
 
