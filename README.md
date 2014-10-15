@@ -13,9 +13,9 @@ A dead simple cli ssh server list.
 
 
 ## Installation
-
-    $ gem install ssh-bookmarks
-
+```zsh
+$ gem install ssh-bookmarks
+```
 ## Updating
 
     $ gem update ssh-bookmarks
@@ -32,6 +32,13 @@ A dead simple cli ssh server list.
 ## Configure
 
     $ man ssh_config
+
+
+You can use additional options in your ~/.ssh/config file
+
+| Option | Description           | 
+|:-----|:------------------------|
+| # hidden | Ignore section below|  
 
 
 --- 
